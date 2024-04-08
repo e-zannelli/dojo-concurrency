@@ -11,3 +11,5 @@ type Response struct {
 ```
 
 La fonction process doit appeler la fonction Call du client pour chaque élément de generator, le retour n'est pas vérifié.
+
+Modifier le code pour faire les appels de manière concurrente.
