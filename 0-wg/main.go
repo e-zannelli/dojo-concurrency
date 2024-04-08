@@ -7,7 +7,7 @@ import (
 
 func process(c client.Client, generator <-chan string) []client.Response {
 	for id := range generator {
-		c.Call(id)
+		go c.Call(id)
 	}
 
 	return make([]client.Response, 0)

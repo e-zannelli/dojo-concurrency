@@ -185,7 +185,7 @@ func (c *statsClient) assertCalls(expectedCalls []string) {
 	for _, id := range expectedCalls {
 		expected[id] = false
 	}
-	c.wg.Wait()
+	//c.wg.Wait()
 	close(c.chCalls)
 	for id := range c.chCalls {
 		called, ok := expected[id]
